@@ -1,56 +1,340 @@
-body {
-    margin: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #13ADB5);
-    color: white;
+/* ===========================
+   General
+=========================== */
+
+html{
+    scroll-behavior:smooth;
 }
 
-.container {
-    max-width: 900px;
-    margin: 100px auto;
-    text-align: center;
-    padding: 30px;
+body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:#f8fafc;
+    color:#333;
+    line-height:1.7;
 }
 
-h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
+
+/* ===========================
+   Navigation Bar
+=========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    box-sizing:border-box;
+
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+
+    z-index:1000;
 }
 
-.subtitle {
-    font-size: 1.3rem;
-    color: #e5e7eb;
-    margin-bottom: 40px;
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 28px;
-    margin: 10px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    background: #13ADB5;
-    color: white;
-}
-
-.button:hover {
-    background: #0f8e95;
-    transform: translateY(-2px);
-}
-
-.icon-links{
-    margin-top:40px;
-}
-
-.icon-links a{
-    color:white;
-    text-decoration:none;
-    margin:0 18px;
-    font-size:1.15rem;
-}
-
-.icon-links a:hover{
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
     color:#13ADB5;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+
+    list-style:none;
+
+    margin:0;
+    padding:0;
+}
+
+nav a{
+
+    color:#555;
+    text-decoration:none;
+
+    font-size:1rem;
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+nav a:hover{
+
+    color:#13ADB5;
+
+}
+
+
+/* ===========================
+   Top Section
+=========================== */
+
+.container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding-top:170px;
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:4rem;
+
+    margin-bottom:10px;
+
+    color:#222;
+
+}
+
+.subtitle{
+
+    font-size:1.25rem;
+
+    color:#666;
+
+}
+
+.keywords{
+
+    margin-top:30px;
+
+    font-size:1.15rem;
+
+    color:#13ADB5;
+
+    letter-spacing:1px;
+
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+.links{
+
+    margin-top:45px;
+
+}
+
+.links a{
+
+    display:inline-block;
+
+    margin:8px;
+
+    padding:12px 28px;
+
+    border:2px solid #13ADB5;
+
+    border-radius:30px;
+
+    color:#13ADB5;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.links a:hover{
+
+    background:#13ADB5;
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ===========================
+   Sections
+=========================== */
+
+section{
+
+    max-width:900px;
+
+    margin:90px auto;
+
+    padding:0 25px;
+
+}
+
+section h2{
+
+    position:relative;
+
+    padding-left:20px;
+
+    color:#13ADB5;
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+}
+
+section h2::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:6px;
+    height:100%;
+
+    background:#13ADB5;
+
+    border-radius:3px;
+
+}
+
+section h2::after{
+
+    content:"";
+
+    display:block;
+
+    margin-top:12px;
+
+    height:2px;
+
+    background:#13ADB5;
+
+}
+
+section p{
+
+    color:#555;
+
+    font-size:1.05rem;
+
+}
+
+
+/* ===========================
+   List
+=========================== */
+
+ul{
+
+    padding-left:22px;
+
+}
+
+li{
+
+    margin-bottom:10px;
+
+}
+
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:50px;
+
+    color:#888;
+
+    border-top:1px solid #ddd;
+
+    margin-top:80px;
+
+}
+
+
+/* ===========================
+   Image
+=========================== */
+
+.profile{
+
+    width:180px;
+
+    border-radius:50%;
+
+    margin-bottom:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px){
+
+nav{
+
+    flex-direction:column;
+
+    padding:15px;
+
+}
+
+nav ul{
+
+    margin-top:15px;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.container{
+
+    padding-top:220px;
+
+}
+
+h1{
+
+    font-size:2.8rem;
+
+}
+
+.subtitle{
+
+    font-size:1rem;
+
+}
+
+.links a{
+
+    display:block;
+
+    margin:12px auto;
+
+    width:220px;
+
+}
+
 }
