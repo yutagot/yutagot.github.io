@@ -338,3 +338,22 @@ h1{
 }
 
 }
+
+
+/* ===========================
+   Language Switcher
+=========================== */
+
+.language {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.language a {
+    text-decoration: none;
+    color: #333;
+}
+
+.language a:hover {
+    color: #0aa;
+}
