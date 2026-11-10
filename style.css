@@ -246,6 +246,42 @@ li{
 
 }
 
+.news-list{
+
+    list-style:none;
+
+    padding-left:0;
+
+}
+
+.news-list li{
+
+    display:flex;
+
+    gap:25px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #e2e8f0;
+
+}
+
+.news-list time{
+
+    flex:0 0 55px;
+
+    color:#13ADB5;
+
+    font-weight:700;
+
+}
+
+.news-list span{
+
+    color:#555;
+
+}
+
 
 /* ===========================
    Footer
@@ -334,6 +370,12 @@ h1{
     margin:12px auto;
 
     width:220px;
+
+}
+
+.news-list li{
+
+    gap:15px;
 
 }
 
